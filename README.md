@@ -1,5 +1,15 @@
 # VeNoM
 
+## Introduction
+*VeNoM* is a study of parameters that may affect performance of an approximate subgraph matching algorithm.
+Particularly, it focuses on the breadth and depth of neighborhood considered during similarity computation
+of two vertices and creates different instances of the algorithm based on it.
+
+Please cite our paper, if you use our source code.
+* "VeNoM: Approximate Subgraph Matching with Enhanced Neighbourhood Structural Information. CODS-COMAD'24"
+
+
+## Repository Structure
 The base folder contains binary for four algorithms, each in a separate folder.
 The mapping with respect to the algorithm names in the paper to the corresponding code folder is given below.
 
