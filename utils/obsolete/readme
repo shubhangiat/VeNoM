@@ -1,0 +1,89 @@
+===========
+analyse.sh:
+===========
+
+USAGE: ./analyse.sh <output file to analyse> <k - number of results (k of top-k)> <n - number of top results wanted (5, 10 etc)> <relative path to utils folder>
+
+Reports degree, chi square and graph structure of answer graphs
+Call from the folder where the output file to be analysed is stored, the answer files would be stored in the same folder.
+
+
+==================
+calc_obs_count.sh:
+==================
+
+#USAGE: ./calc_obs_count.sh vertex_pair_label "space separated neighbour list of (label,probability) for query vertex" "space separated neighbour list of (label,probability) for input graph vertex"
+
+Calculate observed values of s_0, s_1 and s_2
+Calls compute_mat_sym.sh and sum_simlevel.sh, in that order
+# label-probability pairs MUST not have any space, list must be passed in quotes
+
+
+===================
+compute_degree2.sh:
+===================
+
+#USAGE: ./compute_degree2.sh space separated list of probabilities of neighbouring vertices
+
+Computes degree of each input graph vertex
+# label-probability pair MUST not have any space, list must be passed in quotes
+
+
+==================
+compute_degree.sh:
+==================
+
+USAGE: compute_degree.sh "space separated list of (label,probability)"
+
+Computes degree of each input graph vertex
+# label-probability pair MUST not have any space, list must be passed in quotes
+
+
+===================
+compute_mat_sym.sh:
+===================
+
+USAGE: ./compute_mat_sym.sh "space separated list of query triplets" "space separated list of input graph triplets"
+
+Calculate observed values of s_0, s_1 and s_2 for each triplet
+# triplets MUST not have any space, list must be passed in quotes
+
+
+=====================
+get_indiv_outputs.sh:
+=====================
+
+USAGE: ./get_indiv_outputs.sh
+
+Divide 'output_all' file by the number of query graph searches it has
+Call from the folder where you want the answer files
+
+
+========================
+ip_generate_triplets.sh:
+========================
+
+USAGE: ./ip_generate_triplets.sh v_label "space separated list of (label,probability)"
+
+Generate triplets with their associated probability for input graph
+# label-probability pairs MUST not have any space, list must be passed in quotes
+
+
+=======================
+q_generate_triplets.sh:
+=======================
+
+USAGE: ./q_generate_triplets.sh v_label "comma separated list of labels"
+
+Generate triplets for query graph
+# list must be passed in quotes
+
+
+================
+sum_simlevel.sh:
+================
+
+USAGE: ./sum_simlevel.sh <list of "comma-space separated list of (simlevel,probability)">
+
+Sum up distribution of similarity levels corresponding to each query triplet
+# simlevel-probability pairs MUST not have any space, lists must be passed in quotes (simlevel => s0, s1, s2)
